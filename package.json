@@ -30,6 +30,7 @@
     "@ckeditor/ckeditor5-basic-styles": "^20.0.0",
     "@ckeditor/ckeditor5-block-quote": "^20.0.0",
     "@ckeditor/ckeditor5-ckfinder": "^20.0.0",
+    "@ckeditor/ckeditor5-code-block": "^20.0.0",
     "@ckeditor/ckeditor5-core": "^20.0.0",
     "@ckeditor/ckeditor5-dev-utils": "^20.0.0",
     "@ckeditor/ckeditor5-dev-webpack-plugin": "^20.0.0",

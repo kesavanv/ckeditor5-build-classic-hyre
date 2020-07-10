@@ -30,8 +30,10 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import Blank from './plugins/ckeditor5-blank/src/blank';
+import McqOptions from './plugins/ckeditor5-mcq-options/src/mcqoptions';
 import Mathematics from 'ckeditor5-math/src/math';
-import Blank from './plugins/ckeditor5-basic-styles/src/blank';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -60,8 +62,10 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Mathematics,
+	CodeBlock,
 	Blank,
+	McqOptions,
+	Mathematics,
 ];
 
 // Editor configuration.
@@ -83,8 +87,10 @@ ClassicEditor.defaultConfig = {
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
-			'math',
+			'codeBlock',
 			'blank',
+			'mcqOptions',
+			'math',
 			'undo',
 			'redo'
 		]
@@ -109,6 +115,24 @@ ClassicEditor.defaultConfig = {
 		outputType: 'script',
 		forceOutputType: false,
 		enablePreview: true
+	},
+	codeBlock: {
+			languages: [
+					{ language: 'plaintext', label: 'Plain text' },
+					{ language: 'c', label: 'C' },
+					{ language: 'cs', label: 'C#' },
+					{ language: 'cpp', label: 'C++' },
+					{ language: 'css', label: 'CSS' },
+					{ language: 'diff', label: 'Diff' },
+					{ language: 'html', label: 'HTML' },
+					{ language: 'java', label: 'Java' },
+					{ language: 'javascript', label: 'JavaScript' },
+					{ language: 'php', label: 'PHP' },
+					{ language: 'python', label: 'Python' },
+					{ language: 'ruby', label: 'Ruby' },
+					{ language: 'typescript', label: 'TypeScript' },
+					{ language: 'xml', label: 'XML' }
+			],
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
