@@ -29,7 +29,9 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+
 import Mathematics from 'ckeditor5-math/src/math';
+import Blank from './plugins/ckeditor5-basic-styles/src/blank';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -59,6 +61,7 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	Mathematics,
+	Blank,
 ];
 
 // Editor configuration.
@@ -81,6 +84,7 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'math',
+			'blank',
 			'undo',
 			'redo'
 		]
